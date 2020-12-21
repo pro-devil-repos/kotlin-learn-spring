@@ -7,8 +7,8 @@ import pro.devil.taskmanagement.persistence.model.Project
 import pro.devil.taskmanagement.persistence.repository.IProjectRepository
 
 @Repository
-@Profile("prod")
-class ProjectRepository : IProjectRepository {
+@Profile("dev")
+class ProjectRepositoryDev : IProjectRepository {
 
     @Value("\${project.prefix}")
     private lateinit var prefix: String

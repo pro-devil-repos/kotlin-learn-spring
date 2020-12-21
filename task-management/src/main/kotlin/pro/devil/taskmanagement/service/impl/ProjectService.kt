@@ -7,8 +7,8 @@ import pro.devil.taskmanagement.persistence.repository.IProjectRepository
 import pro.devil.taskmanagement.service.IProjectService
 
 @Service
-class ProjectService @Autowired constructor(
-    val projectRepository: IProjectRepository
+class ProjectService constructor(
+    @Autowired val projectRepository: IProjectRepository
 ) : IProjectService {
     override fun findById(id: Long?): Project? = projectRepository.findById(id)
 

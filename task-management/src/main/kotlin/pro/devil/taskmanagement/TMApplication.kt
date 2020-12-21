@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import pro.devil.taskmanagement.persistence.model.Project
-import pro.devil.taskmanagement.service.impl.ProjectService
+import pro.devil.taskmanagement.service.IProjectService
 import java.time.LocalDate
 import javax.annotation.PostConstruct
 
@@ -12,7 +12,7 @@ import javax.annotation.PostConstruct
     scanBasePackages = ["pro.devil.taskmanagement.config", "pro.devil.taskmanagement.persistence", "pro.devil.taskmanagement.service"]
 )
 class TMApplication(
-    @Autowired val projectService: ProjectService
+    @Autowired val projectService: IProjectService
 ) {
 
     @PostConstruct

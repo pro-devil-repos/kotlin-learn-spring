@@ -7,9 +7,4 @@ import pro.devil.taskmanagement.persistence.repository.impl.ProjectRepository
 @Configuration
 class PersistenceConfig {
 
-    @Bean
-    fun projectRepository(): ProjectRepository {
-        return ProjectRepository()
-    }
-
 }

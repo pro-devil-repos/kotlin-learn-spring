@@ -5,9 +5,10 @@ import java.time.LocalDate
 open class Project(
     var id: Long?,
     var name: String,
-    var dateCreated: LocalDate?
+    var dateCreated: LocalDate?,
+    var internalId: String? = null
 ) {
-    constructor(project: Project) : this(project.id, project.name, project.dateCreated)
+    constructor(project: Project) : this(project.id, project.name, project.dateCreated, project.internalId)
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
